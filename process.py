@@ -18,7 +18,7 @@ print(df['full_recipe'].head())
 print(df['full_recipe'][0])
 df['full_recipe'].to_csv('unprocessed.csv', index=False)
 
-number = r'(a|\d+\s*+\d+/\d+|\d+/\d+|\d+\.\d+|\d+)'
+number = r'(a|\d+\s*\d+/\d+|\d+/\d+|\d+\.\d+|\d+)'
 text_numbers = r'(a|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen)'
 tens = r'(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)'
 large = r'(hundred|thousand)'

@@ -4,7 +4,7 @@ import re
 
 test = ["a bottle of milk\nthree hundred grams cheese\n1.5 pound flour\na l of boiling water\n1/2 tsp. coca powder\n4 tablespoon of honey"]
 
-number = r'(a|\d+\s*+\d+/\d+|\d+/\d+|\d+\.\d+|\d+)'
+number = r'(a|\d+\s*\d+/\d+|\d+/\d+|\d+\.\d+|\d+)'
 text_numbers = r'(a|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen)'
 tens = r'(twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)'
 large = r'(hundred|thousand)'
