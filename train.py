@@ -6,8 +6,8 @@ from sklearn.model_selection import train_test_split
 from pytorch_lightning import Trainer
 from model import Model,DataModule
 
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2-medium", cache_dir="./cache/gpt2token", padding_side='left')
-gpt2 = GPT2LMHeadModel.from_pretrained("gpt2-medium", cache_dir="./cache/gpt2model")
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2", cache_dir="./cache/gpt2token", padding_side='left')
+gpt2 = GPT2LMHeadModel.from_pretrained("gpt2", cache_dir="./cache/gpt2model")
 tokenizer.pad_token = tokenizer.eos_token
 
 df = pd.read_csv("test.csv")

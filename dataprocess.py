@@ -3,23 +3,36 @@ import json
 import csv
 # df = pd.read_csv('full_dataset.csv')
 
-df_small = pd.read_csv('full_dataset.csv', nrows = 1000, usecols=['ingredients','title','directions'], index_col=None)
+df_small = pd.read_csv('full_dataset.csv', nrows = 2000000, usecols=['ingredients','title','directions'], index_col=None)
 # df_small = pd.read_csv('full_dataset.csv', nrows = 1, index_col=None)
 # df_small = pd.read_csv('test.csv', nrows = 100, usecols=['ingredients'], index_col=None)
 
 for index, row in df_small.iterrows():
     ingredient = row['ingredients']
-    ingredient = ingredient.replace('[','').replace(']','').replace('"','').replace(',','')
-    ingredient = f"Ingredients: {ingredient}. Recipe:"
+    ingredient = ingredient.replace('", "','\n')
+    ingredient = ingredient.replace('[','')
+    ingredient = ingredient.replace(']','')
+    ingredient = ingredient.replace('"','')
+    ingredient = f"Ingredients: {ingredient}.\n"
     df_small.at[index, 'ingredients'] = ingredient
 
     title = row['title']
-    title = title.replace('[','').replace(']','').replace('"','').replace(',','')
+    # title = title.replace('[','').replace(']','').replace('"','').replace('", "','\n')
+    title = title.replace('", "','\n')
+    title = title.replace('[','')
+    title = title.replace(']','')
+    title = title.replace('"','')
+    title = f"{ingredient}Title: {title}.\n"
     df_small.at[index, 'title'] = title
     
     directions = row['directions']
-    directions = directions.replace('[','').replace(']','').replace('"','').replace(',','')
-    directions = f"{ingredient} {directions}"
+    print(directions)
+    # directions = directions.replace('[','').replace(']','').replace('"','').replace('", "','\n')
+    directions = directions.replace('", "','\n')
+    directions = directions.replace('[','')
+    directions = directions.replace(']','')
+    directions = directions.replace('"','')
+    directions = f"{title}Receipe: {directions}"
     df_small.at[index, 'directions'] = directions
 
 df_small.to_csv('test.csv', index=False)
