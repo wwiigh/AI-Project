@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="user_inerface.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Generator</h1>
+        <form id="recipeForm">
+            <label for="ingredients">Enter ingredients:</label>
+            <input type="text" id="ingredients" name="ingredients" placeholder="e.g., eggs, flour, sugar" required>
+            
+            <label for="diet">Select your diet:</label>
+            <select id="diet" name="diet">
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="none">None</option>
+            </select>
+            
+            <button type="submit">Generate Recipe</button>
+        </form>
+        <div id="recipeOutput"></div>
+    </div>
+    <script src="user_interface.js"></script>
+</body>
+</html>
