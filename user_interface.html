@@ -10,20 +10,33 @@
     <div class="container">
         <h1>Recipe Generator</h1>
         <form id="recipeForm">
+            <label for="title">Enter dish name:</label>
+            <input type="text" id="title" name="title" placeholder="e.g., brownie. This field can be empty if dish name is unknown." required / >
+
             <label for="ingredients">Enter ingredients:</label>
             <input type="text" id="ingredients" name="ingredients" placeholder="e.g., eggs, flour, sugar" required>
             
             <label for="diet">Select your diet:</label>
             <select id="diet" name="diet">
                 <option value="vegetarian">Vegetarian</option>
-                <option value="vegan">Vegan</option>
+                <option value="lacto-ovo vegetarian">Lacto-ovo Vegetarian</option>
                 <option value="none">None</option>
             </select>
             
             <button type="submit">Generate Recipe</button>
         </form>
-        <div id="recipeOutput"></div>
+
+        <h2>Generated Recipe:</h2>
+        <form id="recipeOutput">
+            
+        </form>
+        
     </div>
+
+    
+    
+    
+    
     <script src="user_interface.js"></script>
 </body>
 </html>

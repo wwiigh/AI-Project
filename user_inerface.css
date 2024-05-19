@@ -1,11 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Lighter shade for a softer appearance */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Aligns children vertically */
     height: 100vh;
 }
 
@@ -40,4 +41,14 @@ button {
 }
 button:hover {
     background-color: #45a049; /* Slightly darker on hover */
+}
+
+output-box[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc; /* Thicker border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Larger font size */
 }
