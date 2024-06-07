@@ -5,7 +5,8 @@ In our daily life, we often want to make use of the ingredients we have at hand 
 ## Aim:
 We aim to develop a tool that uses a textual description to provide detailed recipes, including ingredients and cooking instructions. This tool will employ natural language processing to interactively refine recipe suggestions based on user-provided ingredients and preferences.
 ## Usage:
-### Files: flaskApp(1).ipynb, user_interface.css, user_intreface.html, user_interface.js
+### Files: 
+flaskApp(1).ipynb, user_interface.css, user_intreface.html, user_interface.js
 ### Steps:
 1. Server setup:  
   (1) To set up the Recipe Generator APP, you can hold the backend server by runnning flaskApp(1).ipynb on Colab or any local device.  
