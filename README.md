@@ -15,15 +15,15 @@ We aim to develop a tool that uses a textual description to provide detailed rec
   (2) User may run user_interface.html to start the APP interface.  
   (3) User can provide inputs: Dish name, Ingredients, and his or her diet preference for our APP to generate a customized recipe.  
 
-## prerequisite
+## Prerequisite
 In requirement.txt
-## hyperparameters
+## Hyperparameters
 learning_rate = 1e-4
 num_epochs = 4
 accumulation_steps = 4
 batch_size = 8
 
-## experiment results
+## Experiment results
 For three model, we first use BELU score to evaluate the reslut. Below is experiment result
 |Model|Bleu score|
 |---|---|
