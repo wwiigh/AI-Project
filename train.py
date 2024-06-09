@@ -1,3 +1,4 @@
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
@@ -68,4 +69,5 @@ trainer.train()
 
 # 保存最佳模型
 trainer.save_model("./final_model")
+
 

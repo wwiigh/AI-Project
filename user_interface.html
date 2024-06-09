@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Generator</title>
+    <link rel="stylesheet" href="user_inerface.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Generator</h1>
+        <form id="recipeForm">
+            <label for="title">Enter dish name:</label>
+            <input type="text" id="title" name="title" placeholder="e.g., brownie. This field can be empty if dish name is unknown." required / >
+
+            <label for="ingredients">Enter ingredients:</label>
+            <input type="text" id="ingredients" name="ingredients" placeholder="e.g., eggs, flour, sugar" required>
+            
+            <label for="diet">Select your diet:</label>
+            <select id="diet" name="diet">
+                <option value="vegetarian">Vegetarian</option>
+                <option value="lacto-ovo vegetarian">Lacto-ovo Vegetarian</option>
+                <option value="none">None</option>
+            </select>
+            
+            <button type="submit">Generate Recipe</button>
+        </form>
+
+        <h2>Generated Recipe:</h2>
+        <div id="recipeOutput">
+            <div id="recipeTitle"><strong>Dish Name:</strong> <span></span></div>
+            <div id="recipeIngredients"><strong>Ingredients:</strong> <span></span></div>
+            <div id="recipeDirections"><strong>Directions:</strong> <span></span></div>
+        </div>
+</div>
+
+            
+        
+    </div>
+
+    
+    
+    
+    
+    <script src="user_interface.js"></script>
+</body>
+</html>
